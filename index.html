@@ -26,8 +26,16 @@
         </header>
 
         <main>
+            <section id="carousel" class="carousel-container">
+                <div class="carousel">
+                    <img src="https://via.placeholder.com/800x400?text=Image+1" alt="Family Photo 1">
+                    <img src="https://via.placeholder.com/800x400?text=Image+2" alt="Family Photo 2">
+                    <img src="https://via.placeholder.com/800x400?text=Image+3" alt="Family Photo 3">
+                    <img src="https://via.placeholder.com/800x400?text=Image+4" alt="Family Photo 4">
+                </div>
+            </section>
+
             <section id="index">
-                <h2>Home</h2>
                 <p>Welcome to my family website! Here you can find information about our history, pictures, calendar of events, message board, and contact information.</p>
             </section>
         </main>
@@ -35,5 +43,27 @@
         <footer>
             <p>&copy; 2026 My Website. All rights reserved.</p>
         </footer>
+
+        <script>
+            let currentImageIndex = 0;
+            const images = document.querySelectorAll('.carousel img');
+            const totalImages = images.length;
+
+            function showImage(index) {
+                images.forEach(img => img.classList.remove('active'));
+                images[index].classList.add('active');
+            }
+
+            function nextImage() {
+                currentImageIndex = (currentImageIndex + 1) % totalImages;
+                showImage(currentImageIndex);
+            }
+
+            // Initialize carousel
+            showImage(currentImageIndex);
+
+            // Auto-rotate every 4 seconds
+            setInterval(nextImage, 4000);
+        </script>
     </body>
 </html>
