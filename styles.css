@@ -1,6 +1,6 @@
 .banner {
-    background: #3cb7e7;
-    color: white;
+    background: #1f3a93; /* A nice blue color */
+    color: #f7f4ef; /* A light cream color */
     text-align: center;
     padding: 60px 20px;
     margin-bottom: 20px;
@@ -9,11 +9,13 @@
 .banner h1 {
     margin: 0;
     font-size: 2.5em;
+    color: #c94a4a; /* A warm red color, softer than the red on the flag */
 }
 
 .banner p {
     margin: 10px 0 0 0;
     font-size: 1.1em;
+    color: #c94a4a; /* Same warm red color for consistency */
 }
 
 nav ul {
