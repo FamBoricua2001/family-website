@@ -19,18 +19,13 @@
                 .catch(error => console.error('Error loading banner:', error))
         </script>
 
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="pictures.html">Pictures</a></li>
-                    <li><a href="calendar.html">Calendar</a></li>
-                    <li><a href="messageboard.html">Message Board</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div id="navbar"></div>
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(html => { document.getElementById('navbar').innerHTML = html; })
+                .catch(err => console.error('Error loading navbar:', err));
+        </script>
 
         <main>
             <section id="history">

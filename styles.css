@@ -35,6 +35,49 @@ nav a:hover {
     color: #c60c30;
 }
 
+/* Dropdown menu styles for navbar.html */
+.site-nav ul {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav a {
+    color: #f7f4ef;
+    padding: 8px 6px;
+    display: inline-block;
+}
+
+.site-nav .dropdown {
+    position: relative;
+}
+
+.site-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 8px 0;
+    display: none;
+    z-index: 50;
+}
+
+.site-nav .dropdown-menu li a {
+    color: #003366;
+    padding: 8px 16px;
+    display: block;
+}
+
+.site-nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 .banner {
     background: linear-gradient(135deg, #c60c30 0%, #f7f4ef 45%, #002868 100%);
     text-align: center;
@@ -53,7 +96,7 @@ nav a:hover {
 
 .banner p {
     margin: 10px 0 0 0;
-    font-size: 1.1em;
+    font-size: 0.9em;
     color: #e57f6f;
 }
 
