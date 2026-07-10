@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Family Elders - Corretjer Family</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="banner"></div>
+        <script>
+            fetch('banner.html')
+                .then(response => response.text())
+                .then(data => { document.getElementById('banner').innerHTML = data; })
+                .catch(error => console.error('Error loading banner:', error));
+        </script>
+
+        <div id="navbar"></div>
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(html => { document.getElementById('navbar').innerHTML = html; })
+                .catch(err => console.error('Error loading navbar:', err));
+        </script>
+
+        <main>
+            <section id="family-elders">
+                <h2>Family Elders</h2>
+                <p>Welcome to the Family Elders page. Here we honor the grandparents, great-grandparents, and older relatives who keep our Puerto Rican traditions alive.</p>
+                <article>
+                    <h3>Grandparents</h3>
+                    <p>Share stories, names, and memories from your grandparents here. Mention special dishes, family recipes, or important lessons they taught.</p>
+                </article>
+                <article>
+                    <h3>Great-grandparents</h3>
+                    <p>Describe the older generation and how they influenced your family's heritage and values.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 My Website. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
